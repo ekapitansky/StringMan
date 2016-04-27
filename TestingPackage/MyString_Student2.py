@@ -25,8 +25,15 @@ class MyString():
     #Returns a string that consists of the substring between start and end indexes (both included) in the current string.
     #Index 1 corresponds to the first character in the current string.'''
     def getSubstring( self,start, end):
+        sub=" "
+        try:
+            for a in range(start,end):
+                sub=sub+self.str[a]
+        except IndexError:
+            return("Index out of bounds")
 
-        return 1
+        return sub
+
     #Breaks the string down, and returns it as a character string
     def getCharList(self):
 
